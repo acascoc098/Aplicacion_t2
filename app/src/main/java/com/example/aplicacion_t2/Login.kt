@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -74,30 +75,18 @@ class Login : AppCompatActivity() {
             }
         }
 
-        // Evento para CheckBox 3
+
         chk3.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                // Acción cuando se selecciona chk3
                 showToast("CheckBox 3 seleccionado")
             } else {
-                // Acción cuando se deselecciona chk3
                 showToast("CheckBox 3 deseleccionado")
             }
         }
 
-        // Evento para Spinner
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val selectedItem = parent?.getItemAtPosition(position).toString()
-                showToast("Elemento seleccionado: $selectedItem")
-            }
+        //Spinner
+        setupSpinner()
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                showToast("Ningún elemento seleccionado en el Spinner")
-            }
-        }
-
-        // Evento para RadioButtons
         radioGroup.setOnCheckedChangeListener { group, checkedId ->
             val radioButton: RadioButton = findViewById(checkedId)
             val radioText = radioButton.text.toString()
@@ -105,6 +94,12 @@ class Login : AppCompatActivity() {
         }
     }
 
+    private fun setupSpinner() {
+        val names = listOf("1º A", "1º B", "2º A", "2º B") // Lista de nombres
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, names)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
+    }
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }

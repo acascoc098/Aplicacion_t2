@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="57dp"
             android:layout_weight="1"
             android:text="@string/app_name"
             android:textColor="#000000"
@@ -39,10 +39,10 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="177dp"
-            android:layout_height="122dp"
-            android:src="@drawable/usuario"
-            android:layout_weight="1"/>
+            android:layout_width="131dp"
+            android:layout_height="140dp"
+            android:layout_weight="1"
+            android:src="@drawable/usuario" />
 
         <TextView
             android:id="@+id/usuariotv"
@@ -133,19 +133,19 @@
                     android:id="@+id/btr_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="DAM" />
 
                 <RadioButton
                     android:id="@+id/btr_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="DAW" />
 
                 <RadioButton
                     android:id="@+id/btr_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pulsame" />
+                    android:text="ASIR" />
             </RadioGroup>
 
         </LinearLayout>
