@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        btnAlarma = findViewById(R.id.button3)
+        btnAlarma = findViewById(R.id.buttonAlarm)
 
         btnAlarma.setOnClickListener { view ->
             val intent3 = Intent(AlarmClock.ACTION_SET_ALARM).apply {
