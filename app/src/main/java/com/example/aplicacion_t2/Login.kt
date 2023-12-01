@@ -29,7 +29,7 @@ class Login : AppCompatActivity() {
 
             if (usernameInput == MYUSSER && passwordInput == MYPASS) {
                 Toast.makeText(this, "Acceso correcto", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, Principal::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
 
             } else {
