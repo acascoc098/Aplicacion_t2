@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Aplicacion_t2</string>
+    <string name="usu">Usuario:</string>
+    <string name="usu2">Introduce tu usuario...</string>
+    <string name="contra">Contraseña:</string>
+    <string name="contra2">Introduce tu contraseña...</string>
+    <string name="boton">Acceder</string>
+    <string name="yop">acascoc098</string>
+    <string name="minombre">Andrea Castilla Cocera</string>
+    <string name="version">Primera entrega del final project</string>
+</resources>
