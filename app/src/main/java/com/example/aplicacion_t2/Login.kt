@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Spinner
@@ -56,10 +57,8 @@ class Login : AppCompatActivity() {
 
         chk1.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                // Acción cuando se selecciona chk1
                 showToast("CheckBox 1 seleccionado")
             } else {
-                // Acción cuando se deselecciona chk1
                 showToast("CheckBox 1 deseleccionado")
             }
         }
@@ -95,7 +94,7 @@ class Login : AppCompatActivity() {
     }
 
     private fun setupSpinner() {
-        val names = listOf("1º A", "1º B", "2º A", "2º B") // Lista de nombres
+        val names = listOf("1º A", "1º B", "2º A", "2º B")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, names)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
