@@ -75,9 +75,9 @@ class Dados : AppCompatActivity() {
     private fun throwDadoInTime() {
         val numDados = Array(3){ Random.nextInt(1, 6)}
         val imagViews : Array<ImageView> = arrayOf<ImageView>(
-            bindingMain.imagviewDado1,
-            bindingMain.imagviewDado2,
-            bindingMain.imagviewDado3)
+            imagen1,
+            imagen2,
+            imagen3)
 
         sum = numDados.sum() //me quedo con la suma actual
         for (i in 0..3) //cambio las imagenes, a razón de los aleatorios.
@@ -106,7 +106,7 @@ class Dados : AppCompatActivity() {
     Muestra los resultados, que es la suma de la última tirada.
      */
     private fun viewResult() {
-        bindingMain.txtResultado.text = sum.toString()
+        resultado.text = sum.toString()
         println(sum)
     }
 }
