@@ -47,20 +47,17 @@
         app:layout_constraintTop_toBottomOf="@+id/imagview_dado2"
         app:srcCompat="@drawable/dado1" />
 
-    <TextView
-        android:id="@+id/resultado"
-        android:layout_width="177dp"
-        android:layout_height="73dp"
-        android:text="0"
-        android:textColor="@color/purple_500"
-        android:textSize="60sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/imagview_resultado"
+        android:layout_width="115dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="21dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagview_dado3"
-        app:layout_constraintVertical_bias="0.511" />
+        app:srcCompat="@drawable/_9200826_joker_y_cuatro_cartas_composici_n_abstracta_sobre_un_fondo_blanco" />
 
     <Button
         android:id="@+id/button5"
