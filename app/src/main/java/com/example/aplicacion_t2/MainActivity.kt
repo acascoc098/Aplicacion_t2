@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnMaps : Button
     private lateinit var btnAlarma : Button
     private lateinit var btnDados : Button
+    private lateinit var btnChistes : Button
     private lateinit var progress : ProgressBar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,6 +75,13 @@ class MainActivity : AppCompatActivity() {
 
         btnDados.setOnClickListener { view ->
             val intent = Intent(this, Dados::class.java)
+            startActivity(intent)
+        }
+
+        btnChistes = findViewById(R.id.btnChistes)
+
+        btnChistes.setOnClickListener { view ->
+            val intent = Intent(this, Chistes::class.java)
             startActivity(intent)
         }
 

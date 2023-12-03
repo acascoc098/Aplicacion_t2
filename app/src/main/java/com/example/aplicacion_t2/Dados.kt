@@ -1,5 +1,6 @@
 package com.example.aplicacion_t2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -30,6 +31,12 @@ class Dados : AppCompatActivity() {
         resultado = findViewById(R.id.resultado)
         setContentView(R.layout.dados)
         initEvent()
+
+        var btnVolver = findViewById<Button>(R.id.button5)
+        btnVolver.setOnClickListener { view ->
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
