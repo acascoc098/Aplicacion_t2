@@ -59,20 +59,20 @@ class Dados : AppCompatActivity() {
 
         val schedulerExecutor = Executors.newSingleThreadScheduledExecutor()
         val msc = 1000
-        for (i in 1..5){//lanzamos 5 veces el dado
+        for (i in 1..5){
             schedulerExecutor.schedule(
                 {
-                    throwDadoInTime()  //Lanzo los tres dados.
+                    throwDadoInTime()
                 },
                 msc * i.toLong(), TimeUnit.MILLISECONDS)
         }
 
-        schedulerExecutor.schedule({//El último hilo, es mostrar el resultado.
+        schedulerExecutor.schedule({
             viewResult()
         },
             msc  * 7.toLong(), TimeUnit.MILLISECONDS)
 
-        schedulerExecutor.shutdown()  //Ya no aceptamos más hilos.
+        schedulerExecutor.shutdown()
 
     }
 
@@ -86,8 +86,8 @@ class Dados : AppCompatActivity() {
             imagen2,
             imagen3)
 
-        sum = numDados.sum() //me quedo con la suma actual
-        for (i in 0..3) //cambio las imagenes, a razón de los aleatorios.
+        sum = numDados.sum()
+        for (i in 0..3)
             selectView(imagViews[i], numDados[i])
 
     }
