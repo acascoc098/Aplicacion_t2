@@ -13,6 +13,7 @@ import android.widget.ProgressBar
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Spinner
+import android.widget.Switch
 import android.widget.Toast
 
 class Login : AppCompatActivity() {
@@ -24,6 +25,7 @@ class Login : AppCompatActivity() {
     private lateinit var chk3: CheckBox
     private lateinit var spinner: Spinner
     private lateinit var radioGroup: RadioGroup
+    private lateinit var swich : Switch
 
     private val MYUSSER = "acascoc098"
     private val MYPASS = "acascoc"
@@ -40,6 +42,7 @@ class Login : AppCompatActivity() {
         chk3 = findViewById(R.id.chk_3)
         spinner = findViewById(R.id.spinner)
         radioGroup = findViewById(R.id.radioGroup)
+        swich = findViewById(R.id.switch1)
 
         loginButton.setOnClickListener {
             val usernameInput = usernameEditText.text.toString()
@@ -90,6 +93,14 @@ class Login : AppCompatActivity() {
             val radioButton: RadioButton = findViewById(checkedId)
             val radioText = radioButton.text.toString()
             showToast("RadioButton seleccionado: $radioText")
+        }
+
+        swich.setOnCheckedChangeListener{_, ischecked ->
+            if(ischecked){
+                swich.setText("Repetidor")
+            }else{
+                swich.setText("No repetidor")
+            }
         }
     }
 
