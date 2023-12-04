@@ -36,15 +36,25 @@ android {
     viewBinding{
        enable = true
     }
+
 }
 
+configurations {
+    all {
+        exclude(group = "com.google.guava")
+    }
+}
 dependencies {
+    implementation("com.google.guava:guava:23.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.databinding:compiler:3.2.0-alpha11")
+    implementation("com.google.guava:guava:23.0") {
+        exclude(group = "com.google.guava", module = "listenablefuture")
+    }
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
