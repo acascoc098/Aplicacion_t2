@@ -75,14 +75,14 @@ class MainActivity : AppCompatActivity() {
         btnDados = findViewById(R.id.buttonDados)
 
         btnDados.setOnClickListener { view ->
-            val intent = Intent(this, Dados::class.java)
+            //val intent = Intent(this, Dados::class.java)
             startActivity(intent)
         }
 
         btnChistes = findViewById(R.id.btnChistes)
 
         btnChistes.setOnClickListener { view ->
-            val intent = Intent(this, Chistes::class.java)
+            //val intent = Intent(this, Chistes::class.java)
             startActivity(intent)
         }
 

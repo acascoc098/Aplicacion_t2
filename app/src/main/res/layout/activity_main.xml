@@ -221,7 +221,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="MUSICA"
+                    android:text="DADOS"
                     android:textAlignment="center" />
 
                 <TextView
@@ -229,7 +229,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="SALIR"
+                    android:text="CHISTES"
                     android:textAlignment="center" />
             </LinearLayout>
 
